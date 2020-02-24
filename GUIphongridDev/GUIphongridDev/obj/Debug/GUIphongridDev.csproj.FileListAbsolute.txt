@@ -1,0 +1,14 @@
+C:\Users\MSI\source\repos\GUIphongridDev\GUIphongridDev\bin\Debug\GUIphongridDev.exe.config
+C:\Users\MSI\source\repos\GUIphongridDev\GUIphongridDev\bin\Debug\GUIphongridDev.exe
+C:\Users\MSI\source\repos\GUIphongridDev\GUIphongridDev\bin\Debug\GUIphongridDev.pdb
+C:\Users\MSI\source\repos\GUIphongridDev\GUIphongridDev\obj\Debug\GUIphongridDev.csprojAssemblyReference.cache
+C:\Users\MSI\source\repos\GUIphongridDev\GUIphongridDev\obj\Debug\MainWindow.g.cs
+C:\Users\MSI\source\repos\GUIphongridDev\GUIphongridDev\obj\Debug\App.g.cs
+C:\Users\MSI\source\repos\GUIphongridDev\GUIphongridDev\obj\Debug\GUIphongridDev_MarkupCompile.cache
+C:\Users\MSI\source\repos\GUIphongridDev\GUIphongridDev\obj\Debug\GUIphongridDev_MarkupCompile.lref
+C:\Users\MSI\source\repos\GUIphongridDev\GUIphongridDev\obj\Debug\MainWindow.baml
+C:\Users\MSI\source\repos\GUIphongridDev\GUIphongridDev\obj\Debug\GUIphongridDev.g.resources
+C:\Users\MSI\source\repos\GUIphongridDev\GUIphongridDev\obj\Debug\GUIphongridDev.Properties.Resources.resources
+C:\Users\MSI\source\repos\GUIphongridDev\GUIphongridDev\obj\Debug\GUIphongridDev.csproj.GenerateResource.cache
+C:\Users\MSI\source\repos\GUIphongridDev\GUIphongridDev\obj\Debug\GUIphongridDev.exe
+C:\Users\MSI\source\repos\GUIphongridDev\GUIphongridDev\obj\Debug\GUIphongridDev.pdb
