@@ -20,9 +20,7 @@ namespace Collection
     public partial class MainWindow : Window
     {
         ArrayList arrayList;
-        int txtb_insertdata;
-        int txtb_removedata;
-        String txtb_showdata;
+     
         public MainWindow()
         {
             InitializeComponent();
@@ -30,30 +28,35 @@ namespace Collection
         }
         // BUTTON SHOWALL
         private void Button_Click_1(object sender, RoutedEventArgs e)
-        {   //add data
-            arrayList.Add(10);
-            arrayList.Add(2);
-            arrayList.Add(4);
-            arrayList.Add(45);
-            arrayList.Add(58);
-            arrayList.Sort();
-            // show data
-            foreach (int result in arrayList) {
-                MessageBox.Show(result.ToString());
+        {
+          
+          // foreach (int result in arrayList) {MessageBox.Show(result.ToString()); }
+          foreach(int showdata in arrayList)
+            {
+                MessageBox.Show(showdata.ToString());
             }
-            // count all data
-            MessageBox.Show("total data in ArrayList = " +" "+arrayList.Count.ToString());
-            
+          MessageBox.Show("total data in ArrayList = " +" " +arrayList.Count.ToString());
         }
+
         // BUTTON ADD
         private void Button_Click(object sender, RoutedEventArgs e)
-        {   // Add Data objcet 
-
+        {     
+          //  double insertdata = double.Parse(txtbinsertdata.Text.ToString());
+            if (String.IsNullOrEmpty(txtbinsertdata.Text))
+            {
+                MessageBox.Show("Please Insert Number!!!");
+            }
+            else
+            {
+                arrayList.Add(txtbinsertdata.Text);
+                MessageBox.Show("Add :"+ " " + txtbinsertdata.Text);
+                txtbinsertdata.Text = "";
+            }
         }
         //BUTTON REMOVE
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            arrayList.Remove();
+           // arrayList.Remove();
             //arrayList.RemoveAt(0);
            // MessageBox.Show("Count data = " + " " + arrayList.Count.ToString());
         }

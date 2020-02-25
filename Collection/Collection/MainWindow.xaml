@@ -19,12 +19,12 @@
             </Button.RenderTransform>
         </Button>
         <Button Content="SHOW ALL" HorizontalAlignment="Left" Margin="205,244,0,0" VerticalAlignment="Top" Width="74" Height="34" Click="Button_Click_1"/>
-        <TextBox x:Name="txtb_insertdata" HorizontalAlignment="Left" Height="17" Margin="63,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.022,2.549"/>
+        <TextBox x:Name="txtbinsertdata" HorizontalAlignment="Left" Height="17" Margin="63,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.022,2.549" TextChanged="txtb_insertdata_TextChanged"/>
         <TextBlock HorizontalAlignment="Left" Margin="63,54,0,0" TextWrapping="Wrap" Text="INSERT DATA" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="63,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="SHOW DATA"/><LineBreak/><Run/></TextBlock>
-        <TextBox x:Name="txtb_removedata" HorizontalAlignment="Left" Height="23" Margin="63,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="txtbremovedata" HorizontalAlignment="Left" Height="23" Margin="63,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
         <TextBlock HorizontalAlignment="Left" Margin="63,119,0,0" TextWrapping="Wrap" Text="REMOVE DATA" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtb_showdata" HorizontalAlignment="Left" Height="103" Margin="63,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.492,0.269" TextChanged="TextBox_TextChanged_1"/>
+        <TextBox x:Name="txtbshowdata" HorizontalAlignment="Left" Height="103" Margin="63,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.492,0.269" TextChanged="TextBox_TextChanged_1"/>
 
     </Grid>
 </Window>
