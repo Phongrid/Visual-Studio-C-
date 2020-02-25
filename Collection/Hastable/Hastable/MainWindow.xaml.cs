@@ -33,7 +33,7 @@ namespace Hastable
             hashtable.Add("Phongrid","Tle");
             hashtable.Add("Anontaporn", "Carrot");
             hashtable.Add("Patthanayu", "Poon");
-            MessageBox.Show("Add"  + hashtable );
+          //  MessageBox.Show("Add"  + hashtable );
         }
         //remove 
         private void Button_Click_1(object sender, RoutedEventArgs e)

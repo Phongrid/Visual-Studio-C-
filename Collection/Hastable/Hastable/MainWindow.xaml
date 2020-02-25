@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hastable"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="350" Width="630">
     <Grid>
         <Button x:Name="addButton" Content="ADD" HorizontalAlignment="Left" Margin="148,191,0,0" VerticalAlignment="Top" Width="76" Height="40" Click="addbtn_Click"/>
         <Button x:Name="showallButton" Content="SHOW ALL" HorizontalAlignment="Left" Margin="380,191,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.837,-0.024" Height="40" Click="showallButton_Click"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="144,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="317" RenderTransformOrigin="0.5,0.5" TextChanged="TextBox_TextChanged_1">
+        <TextBox x:Name="txtb_value" HorizontalAlignment="Left" Height="23" Margin="144,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="317" RenderTransformOrigin="0.5,0.5" TextChanged="TextBox_TextChanged_1">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -19,7 +19,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="146,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="317" RenderTransformOrigin="0.5,0.5" TextChanged="TextBox_TextChanged">
+        <TextBox x:Name="txtb_key" HorizontalAlignment="Left" Height="23" Margin="146,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="317" RenderTransformOrigin="0.5,0.5" TextChanged="TextBox_TextChanged">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
