@@ -29,11 +29,19 @@ namespace Collection
         // BUTTON SHOWALL
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-          
-          // foreach (int result in arrayList) {MessageBox.Show(result.ToString()); }
-          foreach(int showdata in arrayList)
-            {
-                MessageBox.Show(showdata.ToString());
+            txtbshowdata.Text = "";
+            foreach (string showdata in arrayList)
+           {       
+                //ถ้าไม่มีข้อมูลใน arrayList ให้แสดง No Data
+                if (String.IsNullOrEmpty(arrayList.Count.ToString()))
+                {
+                    MessageBox.Show("No data");
+                }
+                //ถ้ามีข้อมูลให้แสดงข้อมูลใน arrlayList
+                else
+                {
+                    txtbshowdata.Text += showdata.ToString();
+                }
             }
           MessageBox.Show("total data in ArrayList = " +" " +arrayList.Count.ToString());
         }
@@ -41,10 +49,9 @@ namespace Collection
         // BUTTON ADD
         private void Button_Click(object sender, RoutedEventArgs e)
         {     
-          //  double insertdata = double.Parse(txtbinsertdata.Text.ToString());
             if (String.IsNullOrEmpty(txtbinsertdata.Text))
             {
-                MessageBox.Show("Please Insert Number!!!");
+                MessageBox.Show("Insert Number to Add");
             }
             else
             {
@@ -56,15 +63,24 @@ namespace Collection
         //BUTTON REMOVE
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-           // arrayList.Remove();
-            //arrayList.RemoveAt(0);
-           // MessageBox.Show("Count data = " + " " + arrayList.Count.ToString());
+            if (String.IsNullOrEmpty(txtbremovedata.Text))
+            {
+                MessageBox.Show("Insert Number to Remove");
+            }
+            else
+            {
+                arrayList.Remove(txtbremovedata.Text);
+                MessageBox.Show("Remove" + " " + txtbremovedata.Text + "" + "in arrayList");
+                txtbremovedata.Text = "";
+            }
+
         }
+
         // remove data
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
-        }   
+        } 
         // insert data
         private void txtb_insertdata_TextChanged(object sender, TextChangedEventArgs e)
         {
