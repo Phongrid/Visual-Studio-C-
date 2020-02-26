@@ -30,6 +30,7 @@ namespace Hastable
         // add
         private void addbtn_Click(object sender, RoutedEventArgs e)
         {   //add. (key, value)
+            //txtb_key
             hashtable.Add("Phongrid","Tle");
             hashtable.Add("Anontaporn", "Carrot");
             hashtable.Add("Patthanayu", "Poon");
