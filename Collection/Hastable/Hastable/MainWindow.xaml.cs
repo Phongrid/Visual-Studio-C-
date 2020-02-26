@@ -22,39 +22,73 @@ namespace Hastable
     public partial class MainWindow : Window
     {
         Hashtable hashtable;
+        String newLine = Environment.NewLine;
         public MainWindow()
         {
             InitializeComponent();
             hashtable = new Hashtable();
         }
-        // add
+        // add button
         private void addbtn_Click(object sender, RoutedEventArgs e)
-        {   //add. (key, value)
-            //txtb_key
-            hashtable.Add("Phongrid","Tle");
-            hashtable.Add("Anontaporn", "Carrot");
-            hashtable.Add("Patthanayu", "Poon");
-          //  MessageBox.Show("Add"  + hashtable );
+        {
+            String Key = txtb_key.Text;
+            String Value = txtb_value.Text;
+            if (String.IsNullOrEmpty(Key))
+            {
+                MessageBox.Show("Please Insert Key!");
+            }
+          else if (String.IsNullOrEmpty(Value))
+            {
+                MessageBox.Show("Please Insert Vavlue!");
+            }
+            else
+            {
+                hashtable.Add(Key, Value);
+                MessageBox.Show("Add Key = " + " " + Key
+                            + newLine + "Value = " + " " + Value
+                            + newLine + "Total Data  = " + "\t" + hashtable.Count);
+                
+                txtb_key.Text = "";
+                txtb_value.Text = "";              
+            }         
         }
-        //remove 
+        //remove button
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            hashtable.Remove("Phongrid");
+            String Key = txtb_key.Text;
+            if (String.IsNullOrEmpty(Key))
+            {
+                MessageBox.Show("Please Insert Key!");
+            }
+            else
+            {    // เพิ่มคำสั่งอ้างถึง value hashtable 
+                foreach (string value in hashtable.Values)
+                {
+                    hashtable.Remove(Key);
+                    MessageBox.Show("Remove " 
+                                    + newLine + "Key = " + Key
+                                    + newLine +  "Value = " + value
+                                    + newLine + "Total Data  = " + "\t" + hashtable.Count);
+                    txtb_key.Text = "";
+                    txtb_value.Text = "";
+                }
+            }            
         }
-
         //show all
         private void showallButton_Click(object sender, RoutedEventArgs e)
-        {   // เพิ่มคำสั่งอ้างถึง object hashtable 
-            ICollection icollection = hashtable.Keys;
-            // ดึง key ทีละตัวแสดง
-            foreach (string key in icollection)
+        {
+            List<string> hashtableKeys = hashtable.Keys.OfType<string>().ToList();
+            List<string> hashtableValues = hashtable.Values.OfType<string>().ToList();
+
+            foreach (string keys in hashtableKeys)
             {
-                MessageBox.Show(hashtable[key].ToString());
+                foreach (string values in hashtableValues)
+                {
+                    MessageBox.Show("Keys :" + keys +
+                          newLine + "Value :" + values);
+                }
             }
         }
-
-
-
 
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
