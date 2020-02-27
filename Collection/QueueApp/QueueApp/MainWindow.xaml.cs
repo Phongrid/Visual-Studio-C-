@@ -14,40 +14,38 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace StackApp
+namespace QueueApp
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        Stack stack;
-        string data = "";
+        Queue queue;
         public MainWindow()
         {
             InitializeComponent();
-            stack = new Stack();
+            queue = new Queue();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (String.IsNullOrEmpty(txtb_value.Text))
+            queue.Enqueue("Phongrid");
+            queue.Enqueue("Anontaporn");
+            queue.Enqueue("Pnayu");
+            foreach (string text in queue)
             {
-                MessageBox.Show("Insert Value !!");
+                MessageBox.Show(text);
             }
-            else
+        }
+
+        private void btn_dequeue_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Remove :"+ queue.Dequeue().ToString());
+            foreach (string text in queue)
             {
-     
-                MessageBox.Show("Add \n" + "Value = " + txtb_value.Text);
-               
-                foreach (string values in stack)
-                {
-                    data = data + stack.ToArray() + "\n";
-                    MessageBox.Show("Stack Data \n" + stack);
-                }
-            }MessageBox.Show(data);
-            txtb_value.Clear();
-          
+                MessageBox.Show(text);
+            }
         }
     }
 }
