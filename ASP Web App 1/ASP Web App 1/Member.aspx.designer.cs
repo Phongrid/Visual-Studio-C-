@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ASPNetApp
+namespace ASP_Web_App_1
 {
 
 
-    public partial class Home
+    public partial class Member
     {
 
         /// <summary>
