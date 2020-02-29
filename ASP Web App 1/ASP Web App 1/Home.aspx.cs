@@ -42,10 +42,18 @@ namespace ASP_Web_App_1
       
         protected void Button1_Click(object sender, EventArgs e)
         {
-            int age = DateTime.Now.Year - int.Parse(txtb_year.Text);
-            // WriteCookie(age);// save cookie .this
-            WriteSession(age);
-            CheckAge(int.Parse(Request.Cookies["UserSetting"].Value));
+            if (String.IsNullOrEmpty(txtb_year.Text))
+            {
+                Response.Write("<script>alert('Empty!!!');</script>");
+            }
+            else
+            {
+                int age = DateTime.Now.Year - int.Parse(txtb_year.Text);
+                // WriteCookie(age);// save cookie .this
+                WriteSession(age);
+                CheckAge(int.Parse(Request.Cookies["UserSetting"].Value));
+            }
+            
         }
         private void WriteCookie(int age)
         {   HttpCookie userCookie = new HttpCookie("UserSetting");// Create obj Cookie  Create parameter Cookie = UserSetting

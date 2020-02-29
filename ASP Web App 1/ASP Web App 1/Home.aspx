@@ -11,9 +11,9 @@
         <center>
             <div >
         </div>
-            <asp:Label ID="Label1" runat="server" Text="Label" ></asp:Label>
+            <asp:Label ID="Label1" runat="server" Text="BirthYear :" ></asp:Label>
         <asp:TextBox ID="txtb_year" runat="server"></asp:TextBox>
-        <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
+        <asp:Button ID="Button1" runat="server" Text="SIGN IN" OnClick="Button1_Click" />
          </center>    
 
     <div width="30" height="25" style="vertical-align:middle; text-align:center" >
