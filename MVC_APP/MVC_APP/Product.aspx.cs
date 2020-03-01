@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVC_APP.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,8 @@ namespace MVC_APP
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            ProductRepository productRepository = new ProductRepository();
+            productRepository.getProducts();
         }
     }
 }
